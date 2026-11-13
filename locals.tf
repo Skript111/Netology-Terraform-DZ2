@@ -1,4 +1,4 @@
 locals {
-  web_name = "${var.vm_web_name}-${var.vpc_name}"
-  db_name  = "${var.vm_db_name}-${var.vpc_name}"
+  vm_web_name = "netology-${var.vpc_name}-platform-web"
+  vm_db_name  = "netology-${var.vpc_name}-platform-db"
 }

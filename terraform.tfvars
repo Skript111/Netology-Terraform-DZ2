@@ -1,20 +1,21 @@
-cloud_id  = "b1gq9shp3gsvji5eo47v"
-folder_id = "b1g1teu6a5mcefnl6b8p"
-
 vms_resources = {
   web = {
     cores         = 2
     memory        = 1
-    core_fraction = 5
-  }
+    core_fraction = 20
+    hdd_size      = 10
+    hdd_type      = "network-hdd"
+  },
   db = {
     cores         = 2
     memory        = 2
     core_fraction = 20
+    hdd_size      = 10
+    hdd_type      = "network-ssd"
   }
 }
 
 metadata = {
   serial-port-enable = 1
-  ssh-keys           = "ubuntu:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIiEVpx5inI1ieLrD4rrlV9Z9+EJDl3ACpT2Kim8NZWaC1GVqkM/jE9Jyd29Q9iVhodKkhJU8Xa+5byvOyVK+UcfjxcNNck6s2LEW7gI9rJ/4rsF7EO5Y//PvoXhOEmCCYQoTJdsROYlE3Tw109Ax4p4KZYRhLgB9kadVNxPeBTX35DAdMFMyQVzRtxS9pKtyVvx0M/U/pxgkp6xGPxHErocebRv+zFe1YWJSo/lYusfjZ2zhEEd7YWTfDHfnzrkuefvq9NAiyN0daa/5xppuS3nmtpuKaAVE6RKQv0aozM4+oSIXVeV+q1yTCVB3ABJW0BO0FyXNEESLbtcCmvffh"
+  ssh-keys           = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM3e5PuUunfZlBD7c3BySd4FjHt3OnS1oEVO7O8v6sSr UbuntyServer"
 }
