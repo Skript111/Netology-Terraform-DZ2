@@ -179,24 +179,19 @@ No changes. Your infrastructure matches the configuration.
 *   Зона `ru-central1-a` вынесена в переменную `var.vm_db_zone`.
 *   Параметры `preemptible` и `nat` также вынесены в переменные `var.vm_db_preemptible` и `var.vm_db_nat`.
 
-![123](img/zad2-1.png)
+![123](img/dor2-1.png)
 
 #### 3. Объединение Output в Задании 4
 Два отдельных output-блока были объединены в один.
 Теперь в файле `outputs.tf` находится единственный блок `output "vms_info"`, который возвращает вложенную структуру (map) с данными для обеих машин (`web` и `db`).
 
-![123](img/zad3-1.png)
-![123](img/zad3-2.png)
+![123](img/dor3-1.png)
+![123](img/dor3-2.png)
 
 #### 4. Вынос секретов и настройка .gitignore
 *   Файлы `cloud_id` и `folder_id` удалены из основного `terraform.tfvars`.
 *   Создан отдельный файл `personal.auto.tfvars`, куда перенесены эти данные (Terraform подхватывает его автоматически).
 *   Файл `personal.auto.tfvars` добавлен в `.gitignore` и отсутствует в публичном репозитории.
-
-![Настройка .gitignore](img/fix4_gitignore.png)
-*(Скриншот: файл `.gitignore` со строкой `personal.auto.tfvars`)*
-![Очищенный terraform.tfvars](img/fix4_tfvars.png)
-*(Скриншот: файл `terraform.tfvars`, где остались только ресурсы и метаданные)*
 
 #### 5. Удаление дублирующего файла
 Для избежания конфликтов при объявлении переменных (Duplicate variable declaration) был полностью удален файл `vms_platform.tf`, так как все его переменные были успешно перенесены в `variables.tf`.
