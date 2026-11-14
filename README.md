@@ -165,7 +165,8 @@ No changes. Your infrastructure matches the configuration.
 
 ![1](img/zad6-5.png)
 
-### 6. Доработка
+## 6. Доработка
+---
 
 *   **Опечатка в платформе:** Значение `standart-v4` (которой не существует) заменено на  `standard-v3` (вынесено в переменную `vm_web_platform_id`).
 *   **Количество ядер:** Значение `cores = 1` исправлено на `cores = 2`.
