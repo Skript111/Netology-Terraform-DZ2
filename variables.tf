@@ -65,7 +65,6 @@ variable "vm_db_nat" {
   default = true
 }
 
-# --- Задание 6: Map переменные ---
 variable "vms_resources" {
   type = map(object({
     cores         = number
